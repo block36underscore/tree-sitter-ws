@@ -1,5 +1,5 @@
 {
-  "name": "Wynnscript",
+  "name": "wynnscript",
   "word": "identifier",
   "rules": {
     "source_file": {
@@ -967,8 +967,8 @@
           }
         },
         {
-          "type": "PATTERN",
-          "value": "[^\\\\]\""
+          "type": "STRING",
+          "value": "\""
         }
       ]
     },

@@ -5,7 +5,7 @@
   "main": "index.js",
   "types": "bindings/node",
   "scripts": {
-    "test": "tree-sitter generate \n tree-sitter parse example-file --debug-graph",
+    "test": "tree-sitter generate \n tree-sitter parse example-file.ws --debug-graph",
     "install": "node-gyp-build",
     "prebuildify": "prebuildify --napi --strip"
   },
@@ -36,8 +36,14 @@
   ],
   "tree-sitter": [
     {
-      "scope": "source.YOUR_LANGUAGE_NAME",
-      "injection-regex": "^YOUR_LANGUAGE_NAME$"
+      "scope": "source.ws",
+      "injection-regex": "^ws$",
+      "file-types": [
+        "ws"
+      ],
+      "highlights": [
+        "queries/highlights.scm"
+      ]
     }
   ]
 }

@@ -149,7 +149,7 @@ module.exports = grammar({
     path: ($) => prec(10, /[a-zA-Z/]+\.ws/),
 
     string: ($) =>
-      seq('"', repeat(choice($.string_content, $.escape_sequence)), /[^\\]"/),
+      seq('"', repeat(choice($.string_content, $.escape_sequence)), '"'),
 
     escape_sequence: ($) => prec(12, '\\"'),
 
